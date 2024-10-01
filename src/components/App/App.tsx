@@ -4,7 +4,8 @@ import Header from '../header/Header'
 import Post from '../Post/Post'
 import './App.scss'
 import { IRecipes } from '../../@types'
-
+import { Route, Routes } from 'react-router-dom';
+import RecipeDetail from '../RecipeDetail/RecipeDetail'
 
 function App() {
  

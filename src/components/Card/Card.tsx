@@ -1,4 +1,5 @@
-import { IRecipes } from "../../@types"
+import { IRecipes } from "../../@types";
+import './Card.scss';
 
 interface recipe {
   recipe:IRecipes

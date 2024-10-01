@@ -1,12 +1,12 @@
 .card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color:cadetblue;
   padding: 10px;
 }
 
-.card{
-  max-width: 360px;
-  max-height: 480px;
-}
+
 
 .title{
   border-bottom: solid white 2px;
