@@ -1,0 +1,21 @@
+.card-container{
+  background-color:cadetblue;
+  padding: 10px;
+}
+
+.card{
+  max-width: 360px;
+  max-height: 480px;
+}
+
+.title{
+  border-bottom: solid white 2px;
+}
+
+.header-post{
+  background-color:cadetblue;
+  padding: 15px;
+  p {
+    padding-top: 7px;
+  }
+}
