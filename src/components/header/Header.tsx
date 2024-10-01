@@ -1,12 +1,13 @@
 import './Header.scss'
+import logo from'../../assets/logo.png'
 
 function Header (){
   
   return(
     <div>
       <div className='Header-container'>
-        <figure className="image is-64x64">
-          <img src="../../assets/logo.png" alt="logo" />
+        <figure className="image is-64x64" >
+          <img src={logo} alt="logo" />
         </figure>
         <form className='auth'>
           <div className='control'>

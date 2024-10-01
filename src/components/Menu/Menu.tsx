@@ -1,14 +1,23 @@
-import { Link } from 'react-router-dom';
+
+import { IRecipes } from '../../@types';
+import RecipeTitle from '../RecipeTitle/RecipeTitle';
 
 
-function Menu (){
+interface MenuProps {
+  recipes:IRecipes[],
+}
 
+function Menu ({recipes}:MenuProps){
+  console.log(recipes);
+  
   return (
     <aside className="menu">
       <p className="menu-label">Accueil</p>
       <ul className="menu-list">
-        <li><a>Cookies au beurre de cacahuète</a></li>
-        <li><a>Macaron framboisier</a></li>
+        {recipes.map((recipe) => {
+          return(
+        < RecipeTitle key={recipe.id} title={recipe} />
+        )})}
       </ul>
     
     </aside>

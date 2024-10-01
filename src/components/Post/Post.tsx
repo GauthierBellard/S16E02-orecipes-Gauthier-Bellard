@@ -1,7 +1,13 @@
 import './Post.scss';
+import { IRecipes } from '../../@types';
+import Card from '../Card/Card';
 
 
-function Post() {
+interface PostProps {
+  theRecipes:IRecipes[],
+}
+
+function Post(props:PostProps) {
 
   return(
     <div>
@@ -10,28 +16,13 @@ function Post() {
         <p className='subtitle'>voici nos 6 recettes</p>
       </div>
       <div className="card-container">
-        <div className="card">
-          <div className="card-image">
-            <figure className="image is-3by2">
-              <img
-                src="https://bulma.io/assets/images/placeholders/1280x960.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
-          <div className="card-content">
-            <div className="media">
-              <div className="media-content">
-                <p className="title is-4">John Smith</p>
-                <p className="subtitle is-6">@johnsmith</p>
-              </div>
-            </div>
 
-            <button className="button">
-              Voir la recette
-            </button>
-          </div>
-        </div>
+        {props.theRecipes.map((currentRecipe) => {
+          return(
+  
+        <Card key={currentRecipe.id} recipe={currentRecipe} />
+
+      )})}
       </div>
     </div>
 
