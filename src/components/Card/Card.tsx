@@ -1,5 +1,6 @@
 import { IRecipes } from "../../@types";
 import './Card.scss';
+import { Link } from "react-router-dom";
 
 interface recipe {
   recipe:IRecipes
@@ -25,9 +26,9 @@ function Card({recipe}:recipe){
               </div>
             </div>
 
-            <button className="button">
+            <Link to={`/recipe/${recipe.slug}`} className="button">
               Voir la recette
-            </button>
+            </Link>
           </div>
         </div>
       );

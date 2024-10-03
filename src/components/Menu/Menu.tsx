@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import { IRecipes } from '../../@types';
 import RecipeTitle from '../RecipeTitle/RecipeTitle';
 
@@ -12,7 +13,7 @@ function Menu ({recipes}:MenuProps){
   
   return (
     <aside className="menu">
-      <p className="menu-label">Accueil</p>
+      <Link className="menu-label" to="/">Accueil</Link>
       <ul className="menu-list">
         {recipes.map((recipe) => {
           return(

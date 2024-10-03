@@ -1,0 +1,83 @@
+@use 'src/styles/vars' as variables;
+
+.recipe {
+  padding: 0 variables.$gutter;
+}
+
+.presentation {
+  position: relative;
+  margin-bottom: variables.$gutter;
+  color: #fff;
+
+  &-image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 60vh;
+    border-radius: 0 0 1rem 1rem;
+  }
+  
+  &-content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: variables.$gutter;
+    padding: variables.$gutter;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+  }
+  
+  &-title {
+    font-size: 2em;
+  }
+  
+  &-infos {
+    letter-spacing: .05em;
+    font-size: .8em;
+    opacity: .7;
+  }
+}
+
+.ingredients {
+  margin: variables.$gutter 0; 
+}
+
+.ingredient {
+  border-bottom: 1px solid #ccc;
+  padding: variables.$halfGutter;
+
+  &:last-child {
+    border: none;
+  }
+  
+  &-quantity {
+    background-color: variables.$color;
+    color: #fff;
+    padding: .3em .6em;
+    border-radius: .3em;
+    display: inline-block;
+  }
+}
+
+.steps {
+  background-color: #F2F2F2;
+  padding: variables.$gutter;
+  border-radius: variables.$gutter variables.$gutter 0 0;
+}
+
+.step {
+  padding-left: 2em;
+  margin: variables.$halfGutter 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    background: variables.$color;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    width: 1.1em;
+    position: absolute;
+  }
+}
+

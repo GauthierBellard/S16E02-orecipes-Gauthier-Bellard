@@ -1,2 +1,29 @@
+@use 'sass:color';
+@use 'src/styles/vars' as variables;
 
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: variables.$menuWidth;
+  padding: variables.$halfGutter 0;
+  background-color: color.scale(variables.$color, $lightness: -80%);
+  box-shadow: inset -20px 0 20px -20px rgba(0,0,0,.75);
+  height: 100vh;
 
+  &-link {
+    display: block;
+    padding: variables.$halfGutter variables.$gutter;
+    transition: color .2s, box-shadow .4s;
+    color: rgba(255,255,255,.75);
+
+    &:hover:not(&--active) {
+      color: white;
+    }
+
+    &--active {
+      color: variables.$color;
+      box-shadow: inset -3px 0 0 variables.$color;
+    }
+  }
+}

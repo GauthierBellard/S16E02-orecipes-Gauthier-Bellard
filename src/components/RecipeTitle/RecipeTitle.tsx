@@ -1,5 +1,5 @@
 import { IRecipes } from "../../@types"
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 interface title {
   title:IRecipes
@@ -9,7 +9,9 @@ function RecipeTitle({title}:title) {
 
 return(
   <li>
-    <Link to={title.title}>{title.title}</Link>
+    <NavLink to={`/recipe/${title.slug}`} className={({isActive}) => isActive ? 
+    'menu-link menu-link--active' : 'menu-link'}>
+      {title.title}</NavLink>
   </li>
 )
 }

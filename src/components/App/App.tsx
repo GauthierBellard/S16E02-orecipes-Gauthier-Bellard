@@ -36,7 +36,7 @@ function App() {
 
   useEffect(()=>{
     getRecipes();    
-  },[getRecipes]
+  },[]
   );
 
   console.log(recipes);
@@ -47,7 +47,19 @@ function App() {
       <Menu recipes={recipes}/>
         <div className='content-container'>
           <Header />
-          <Post theRecipes ={recipes} />
+
+          <Routes>
+
+            <Route path="/" element={<Post theRecipes ={recipes} />} />
+
+            <Route path="/recipe/:slug" element={<RecipeDetail recipes={recipes} />} />
+
+            <Route
+            path="*"
+            element={<div>Page non trouvée / pas encore en place</div>}
+            />
+
+          </Routes>
         </div>
         
       </div>
